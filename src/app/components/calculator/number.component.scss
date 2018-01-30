@@ -1,0 +1,18 @@
+.number {
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        list-style: none;
+        padding: 0;
+        li {
+            &:first-child {
+                width: 100%;
+                padding-right: 17px;
+                button {
+                    width: 100%*2/3;
+                }
+            }
+            width: 33%;
+        }
+    }
+}

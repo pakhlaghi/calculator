@@ -1,3 +1,4 @@
+import { CalculatorService } from './../calculator.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class NumberComponent implements OnInit {
   numbers = Array.from(Array(10).keys());
 
-  constructor() { }
+  constructor(private cService: CalculatorService) { }
 
   ngOnInit() {
   }
 
-  onNumberClick(number) {
-    console.log(number);
+  onNumberClick(number: string) {
+    this.cService.setNumber = number;
   }
 
 }

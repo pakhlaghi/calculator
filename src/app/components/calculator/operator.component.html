@@ -1,0 +1,15 @@
+<div class="operator">
+
+    <ul class="operator__special">
+        <li *ngFor="let key of objectKeys(sOp)">
+            <button (click)="onSOpClick(key)">{{sOp[key]}}</button>
+        </li>
+    </ul>
+
+    <ul class="operator__basic">
+        <li *ngFor="let key of objectKeys(op)">
+            <button class="orange" (click)="onOpClick(key)">{{op[key]}}</button>
+        </li>
+    </ul>
+
+</div>

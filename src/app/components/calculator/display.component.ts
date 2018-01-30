@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalculatorService } from 'app/components/calculator.service';
 
 @Component({
   selector: 'c-display',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayComponent implements OnInit {
 
-  constructor() { }
+  public displayNumber: string;
+public calculatedNumber: string;
+
+  constructor(private cService: CalculatorService) { }
 
   ngOnInit() {
+  this.cService.getCurrentNumber.subscribe(dn => this.displayNumber = dn);
+  this.cService.getDisplayString.subscribe(cn => this.calculatedNumber = cn);
   }
 
 }

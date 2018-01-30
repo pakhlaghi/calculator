@@ -1,0 +1,30 @@
+.operator {
+    ul {
+        list-style: none;
+    }
+    &__basic {
+        position: absolute;
+        right: 0;
+        width: 60%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        li {
+            width: 33%;
+        }
+        li:nth-child(n+4) {
+            width: 100%;
+            text-align: center;
+        }
+        li:first-child button {
+            position: absolute;
+            z-index: 10;
+        }
+    }
+    &__special {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        z-index: 10;
+    }
+}

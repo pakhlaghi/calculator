@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: cadetblue;
+}
+
+ul {
+    padding: 0;
+}
+
+button {
+    width: 50px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 17px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-top: 2px solid transparent;
+    &.black {
+        color: white;
+        background-color: #303030;
+        border-bottom: black 2px solid;
+        border-top: 2px #303030 solid;
+    }
+    &.orange {
+        color: black;
+        background-color: #FF9933;
+        border-bottom: black 2px solid;
+        border-top: 2px #FF9933 solid;
+    }
+}

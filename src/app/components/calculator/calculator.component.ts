@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalculatorService } from 'app/components/calculator.service';
 
 @Component({
   selector: 'c-calculator',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
+public message: string;
 
-  constructor() { }
+  constructor(private cService: CalculatorService) { }
 
   ngOnInit() {
+    this.cService.getMessage.subscribe(m => this.message = m);
   }
 
 }
