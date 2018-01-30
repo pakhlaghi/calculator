@@ -5,7 +5,7 @@ export enum opEnum {
   equal,
   minus,
   multiply,
-  divid
+  divide
 }
 
 export enum specialOpEnum {
@@ -20,7 +20,7 @@ export const operator = {
   [opEnum.equal]: '=',
   [opEnum.minus]: '-',
   [opEnum.multiply]: '*',
-  [opEnum.divid]: '/'
+  [opEnum.divide]: '/'
 }
 
 export const specialOperator = {

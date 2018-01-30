@@ -1,5 +1,5 @@
 import { specialOperator } from './model';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { opEnum, operator, specialOpEnum } from 'app/components/calculator/model';
 import { CalculatorService } from 'app/components/calculator.service';
 
@@ -8,16 +8,13 @@ import { CalculatorService } from 'app/components/calculator.service';
   templateUrl: './operator.component.html',
   styleUrls: ['./operator.component.scss']
 })
-export class OperatorComponent implements OnInit {
+export class OperatorComponent {
 
   objectKeys = Object.keys;
   public op = operator;
   public sOp = specialOperator;
 
   constructor(private cService: CalculatorService) { }
-
-  ngOnInit() {
-  }
 
   public onOpClick(op: opEnum) {
     this.cService.operatorClicked(op);

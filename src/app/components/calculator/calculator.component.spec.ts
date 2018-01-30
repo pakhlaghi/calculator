@@ -1,3 +1,7 @@
+import { OperatorComponent } from './operator.component';
+import { DisplayComponent } from './display.component';
+import { NumberComponent } from './number.component';
+import { CalculatorService } from './../calculator.service';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CalculatorComponent } from './calculator.component';
@@ -8,7 +12,13 @@ describe('CalculatorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CalculatorComponent ]
+      declarations: [
+        CalculatorComponent,
+        NumberComponent,
+        DisplayComponent,
+        OperatorComponent
+       ],
+      providers: [CalculatorService]
     })
     .compileComponents();
   }));
